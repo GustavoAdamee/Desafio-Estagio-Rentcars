@@ -9,5 +9,13 @@ app.get('/', (req, res) => {
     res.send('Welcome to RENTCARS API');
 });
 
+const db = require('./app/models');
+
+db.connection.sync({ force: true })
+.then(() =>{
+    console.log('Drop and Resync Database with { force: true }');
+});
+
+
 const PORT = process.env.SERVER_PORT
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
