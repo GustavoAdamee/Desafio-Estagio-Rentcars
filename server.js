@@ -14,6 +14,9 @@ const db = require('./app/models');
 db.connection.sync({ force: true })
 .then(() =>{
     console.log('Drop and Resync Database with { force: true }');
+})
+.catch((err) => {
+    console.log("Failed to sync db: " + err);
 });
 
 
