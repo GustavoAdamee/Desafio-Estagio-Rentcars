@@ -69,7 +69,7 @@ exports.findOne = (req, res) => {
 exports.delete = (req, res) => {
     const id = req.params.id
 
-    Vehicle.destyoy({
+    Vehicle.destroy({
         where: { id: id }
     })
         .then(num => {
