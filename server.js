@@ -22,5 +22,5 @@ app.get('/', (req, res) => {
 // Routes
 require('./app/routes/vehicle.routes')(app)
 
-const PORT = process.env.SERVER_PORT
+const PORT = process.env.APP_DOCKER_PORT
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
