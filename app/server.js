@@ -1,11 +1,20 @@
+require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
+
 const app = express()
 
-require('dotenv').config()
+app.use(cors({
+    origin: 'http://localhost:3001',
+    methods: 'GET,PUT,POST,DELETE', 
+    credentials: true, 
+  }));
 
 app.use(express.json())
 
-const db = require('./app/models')
+app.use(express.urlencoded({ extended: true }))
+
+const db = require('./models')
 
 db.connection.sync({ force: true })
     .then(() =>{
@@ -20,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 // Routes
-require('./app/routes/vehicle.routes')(app)
+require('./routes/vehicle.routes')(app)
 
 const PORT = process.env.APP_DOCKER_PORT
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))

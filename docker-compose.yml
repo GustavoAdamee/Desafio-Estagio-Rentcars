@@ -10,10 +10,13 @@ services:
       - MYSQL_DATABASE=${MYSQLDB_DATABASE}
     ports:
       - ${MYSQLDB_LOCAL_PORT}:${MYSQLDB_DOCKER_PORT}
+    networks:
+      - backend
+
   app:
     depends_on:
       - mysqldb
-    build: .
+    build: ./app
     env_file:
       - ./.env
     ports:
@@ -24,3 +27,23 @@ services:
       - DB_USER=${MYSQLDB_USER}
       - DB_PASSWORD=${MYSQLDB_ROOT_PASSWORD}
       - DB_NAME=${MYSQLDB_DATABASE}
+    networks:
+      - backend
+      - frontend
+
+  front:
+    depends_on:
+      - app
+    build: 
+      context: ./front
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_BASE_URL=${CLIENT_API_BASE_URL}
+    ports:
+      - ${REACT_LOCAL_PORT}:${REACT_DOCKER_PORT}
+    networks:
+      - frontend
+  
+networks:
+  backend:
+  frontend:
