@@ -1,5 +1,3 @@
-// const { connection } = require(".");
-
 module.exports = (connection, Sequelize) => {
     const Vehicle = connection.define("vehicle",{
         id: {
