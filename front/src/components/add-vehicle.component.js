@@ -74,7 +74,7 @@ export default class AddVehicle extends Component {
 
     onChangeArCondicionado(e) {
         this.setState({
-            ar_condicionado: e.target.value
+            ar_condicionado: e.target.checked
         })
     }
 
@@ -235,18 +235,18 @@ export default class AddVehicle extends Component {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="ar_condicionado">Ar Condicionado</label>
-                            <input
-                                type="number"
-                                className="form-control"
+                            <input 
+                                type="checkbox" 
+                                class="form-check-input" 
                                 id="ar_condicionado"
-                                required
-                                value={this.state.ar_condicionado}
+                                checked={this.state.ar_condicionado}
                                 onChange={this.onChangeArCondicionado}
                                 name="ar_condicionado"
                             />
+                            <label class="form-check-label" for="ar_condicionado">Ar Condicionado</label>
                         </div>
-
+                        <br></br>
+                        <br></br>
                         <button onClick={this.saveVehicle} className="btn btn-success">
                             Submit
                         </button>
