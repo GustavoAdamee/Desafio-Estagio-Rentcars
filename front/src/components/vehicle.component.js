@@ -4,7 +4,7 @@ import { withRouter } from "../common/with-router";
 
 class Vehicle extends Component {
     constructor(props) {
-        super(props)
+                super(props)
 
         this.onChangeLocadora = this.onChangeLocadora.bind(this);
         this.onChangeModelo = this.onChangeModelo.bind(this);
@@ -35,24 +35,16 @@ class Vehicle extends Component {
     }
 
     componentDidMount() {
-        // this.getVehicle(this.props.match.params.id);
         this.getVehicle(this.props.router.params.id);
     }
 
     getVehicle(id) {
-        VehicleDataService.get(id)
+                VehicleDataService.get(id)
             .then(response => {
                 this.setState({
-                    id: response.data.id,
-                    locadora: response.data.locadora,
-                    modelo: response.data.modelo,
-                    marca: response.data.marca,
-                    ano: response.data.ano,
-                    motor: response.data.motor,
-                    portas: response.data.portas,
-                    cambio: response.data.cambio,
-                    ar_condicionado: response.data.ar_condicionado
+                    currentVehicle: response.data
                 })
+                console.log(response.data);
             })
             .catch(e => {
                 console.log(e);
@@ -192,7 +184,6 @@ class Vehicle extends Component {
 
     render() {
         const { currentVehicle } = this.state
-
         return (
             <div>
                 {currentVehicle ? (
