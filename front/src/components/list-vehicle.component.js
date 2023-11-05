@@ -154,7 +154,7 @@ export default class ListVehicle extends Component {
                             </div>
                             <Link
                                 to={"/vehicles/" + currentVehicle.id}
-                                className="btn btn-primary"
+                                className="btn btn-warning"
                             >
                                 Edit
                             </Link>
