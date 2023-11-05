@@ -4,7 +4,7 @@ import { withRouter } from "../common/with-router";
 
 class Vehicle extends Component {
     constructor(props) {
-                super(props)
+        super(props)
 
         this.onChangeLocadora = this.onChangeLocadora.bind(this);
         this.onChangeModelo = this.onChangeModelo.bind(this);
@@ -31,7 +31,6 @@ class Vehicle extends Component {
             },
             message: ""
         }
-
     }
 
     componentDidMount() {
@@ -175,7 +174,7 @@ class Vehicle extends Component {
         VehicleDataService.delete(this.state.currentVehicle.id)
             .then(response => {
                 console.log(response.data);
-                this.props.history.navigate(['/vehicles'])
+                this.props.router.navigate('/')
             })
             .catch(e => {
                 console.log(e);
@@ -272,15 +271,15 @@ class Vehicle extends Component {
                             </div>
                         </form>
                         <button
-                            className="badge badge-danger mr-2"
+                            className="btn btn-danger"
                             onClick={this.deleteVehicle}
                         >
                             Delete
                         </button>
-                        {/* Button with style, black letter and blue bg */}
+                        <br></br>
                         <button
                             type="submit"
-                            className="btn btn-primary"
+                            className="btn btn-info"
                             style={{ color: "black", background: "blue" }}
                             onClick={this.updateVehicle}
                         >
