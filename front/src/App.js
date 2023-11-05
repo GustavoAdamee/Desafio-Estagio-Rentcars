@@ -4,8 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
 
 import AddVehicle from './components/add-vehicle.component';
-// import Vehicle from './components/vehicle.component';
-// import VehicleList from './components/vehicle-list.component';
+import Vehicle from './components/vehicle.component';
+import VehicleList from './components/list-vehicle.component';
 
 class App extends Component {
   render() {
@@ -31,10 +31,10 @@ class App extends Component {
 
         <div className='container mt-3'>
           <Routes>
-            {/* <Route path='/' element={<VehicleList/>}/> */}
-            {/* <Route path='/vehicles' element={<VehicleList/>}/> */}
+            <Route path='/' element={<VehicleList/>}/>
+            <Route path='/vehicles' element={<VehicleList/>}/>
             <Route path='/add' element={<AddVehicle/>}/>
-            {/* <Route path='/vehicles/:id' element={<Vehicle/>}/> */}
+            <Route path='/vehicles/:id' element={<Vehicle/>}/>
           </Routes>
         </div>
       </div>
