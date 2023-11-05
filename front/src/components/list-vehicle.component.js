@@ -10,8 +10,6 @@ export default class ListVehicle extends Component {
         this.retrieveVehicles = this.retrieveVehicles.bind(this)
         this.refreshList = this.refreshList.bind(this)
         this.setActiveVehicle = this.setActiveVehicle.bind(this)
-        // this.removeAllVehicle = this.removeAllVehicle.bind(this)
-        this.searchID = this.searchID.bind(this)
 
         this.state = {
             vehicles: [],
@@ -61,21 +59,8 @@ export default class ListVehicle extends Component {
         })
     }
 
-    searchID() {
-        VehicleDataService.get(this.state.searchID)
-            .then(response => {
-                this.setState({
-                    vehicles: response.data
-                })
-                console.log(response.data)
-            })
-            .catch(e => {
-                console.log(e)
-            })
-    }
-
     render() {
-        const { searchID, vehicles, currentVehicle, currentIndex } = this.state
+        const { vehicles, currentVehicle, currentIndex } = this.state
 
         return (
             <div className="list row">
