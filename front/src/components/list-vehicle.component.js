@@ -140,6 +140,18 @@ export default class ListVehicle extends Component {
                                 </label>{" "}
                                 {currentVehicle.ar_condicionado ? "Sim" : "Não"}
                             </div>
+                            <div>
+                                <label>
+                                    <strong>Created At:</strong>
+                                </label>{" "}
+                                {currentVehicle.createdAt}
+                            </div>
+                            <div>
+                                <label>
+                                    <strong>Updated At:</strong>
+                                </label>{" "}
+                                {currentVehicle.updatedAt}
+                            </div>
                             <Link
                                 to={"/vehicles/" + currentVehicle.id}
                                 className="btn btn-primary"
