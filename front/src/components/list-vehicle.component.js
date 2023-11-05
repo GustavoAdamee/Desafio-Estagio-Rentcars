@@ -130,7 +130,7 @@ export default class ListVehicle extends Component {
                             </div>
                             <div>
                                 <label>
-                                    <strong>cambio:</strong>
+                                    <strong>câmbio:</strong>
                                 </label>{" "}
                                 {currentVehicle.cambio}
                             </div>
@@ -154,7 +154,7 @@ export default class ListVehicle extends Component {
                             </div>
                             <Link
                                 to={"/vehicles/" + currentVehicle.id}
-                                className="btn btn-warning"
+                                className="btn btn-primary"
                             >
                                 Edit
                             </Link>
