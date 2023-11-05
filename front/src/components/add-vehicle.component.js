@@ -137,6 +137,8 @@ export default class AddVehicle extends Component {
                 {this.state.submitted ? (
                     <div>
                         <h4>Vehicle submitted successfully!</h4>
+                        <br></br>
+                        <br></br>
                         <button className="btn btn-success" onClick={this.newVehicle}>
                             add another vehicle
                         </button>
