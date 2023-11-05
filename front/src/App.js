@@ -11,19 +11,19 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className='navbar navbar-expand navbar-dark bg-dark'>
-          <a href='/vehicles' className='navbar-brand'>
-            
+        <nav className='navbar navbar-expand navbar-black bg-black'>
+          <a href='/' className='navbar-brand'>
+            <h3 style={{color: 'yellow'}}>Rentcars API</h3>
           </a>
           <div className='navbar-nav mr-auto'>
             <li className='nav-item'>
-              <Link to={"/vehicles"} className="nav-link">
-                Vehicles
+              <Link to={"/"} className="nav-link">
+                <a style={{color: 'white'}}>Vehicles</a>
               </Link>
             </li>
             <li>
               <Link to={"/add"} className="nav-link">
-                add
+              <a style={{color: 'white'}}>Add new vehicle</a>
               </Link>
             </li>
           </div>
