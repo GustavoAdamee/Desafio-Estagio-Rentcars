@@ -19,7 +19,7 @@ Neste projeto, utilizei as seguintes tecnologias:
 - **React:** React é uma biblioteca JavaScript para a criação de interfaces de usuário interativas e componentizadas.
 - **React-dom:** React-dom é a parte do React usada para renderizar componentes React no navegador.
 - **React-router-dom:**  React-router-dom é uma biblioteca usada para adicionar roteamento à aplicação React, permitindo a criação de páginas e navegação entre elas.
-- **Docker:** Docker é uma plataforma que permite criar, implantar e executar aplicativos em contêineres, isolando as dependências do aplicativo e tornando a implantação mais fácil e consistente.
+- **Docker:** Docker é uma plataforma que permite criar, implantar e executar aplicativos em containeres, isolando as dependências do aplicativo e tornando a implantação mais fácil e consistente.
 
 ### Funcionalidades
 O sistema possui as seguintes funcionalidades:
@@ -32,16 +32,16 @@ O sistema possui as seguintes funcionalidades:
 ## Instruções de Uso
 
 Para testar o sistema, é necessário que o usuário possua as seguintes tecnologias instaladas:
-- [Docker](https://www.docker.com/): O Docker é uma plataforma de contêiner que permite empacotar aplicativos e suas dependências em contêineres, tornando o processo de implantação mais fácil e eficiente.
-- [Docker Compose](https://docs.docker.com/compose/install/): O Docker Compose é uma ferramenta que permite definir e executar aplicativos multicontêiner em Docker, facilitando a configuração de vários serviços em um único arquivo de configuração.
+- [Docker](https://www.docker.com/): O Docker é uma plataforma de container que permite empacotar aplicativos e suas dependências em containeres, tornando o processo de implantação mais fácil e eficiente.
+- [Docker Compose](https://docs.docker.com/compose/install/): O Docker Compose é uma ferramenta que permite definir e executar aplicativos multicontainer em Docker, facilitando a configuração de vários serviços em um único arquivo de configuração.
 Após isso basta clonar o projeto no local de preferência e rodar o seguinte comando:
 ```bash
 docker-compose up
 ```
 O docker irá criar criar três imagens:
-- **mysqldb:** Este contêiner utiliza a imagem do MySQL 5.7 e cria um ambiente de banco de dados para armazenar os dados dos veículos. As configurações são carregadas a partir de um arquivo `.env` e definem o nome do banco de dados, a senha do root e outras configurações.
-- **app:** Este contêiner é responsável por executar o servidor da aplicação Node.js. Ele depende do contêiner `mysqldb` para acessar o banco de dados. As configurações do banco de dados, como host, porta, usuário e senha, são definidas como variáveis de ambiente.
-- **front:** Este contêiner executa a parte do cliente do aplicativo, construída em React. Ele depende do contêiner `app` para acessar a API do servidor. O arquivo `Dockerfile` é usado para construir a imagem do contêiner, e a URL da API é passada como uma variável de ambiente.
+- **mysqldb:** Este container utiliza a imagem do MySQL 5.7 e cria um ambiente de banco de dados para armazenar os dados dos veículos. As configurações são carregadas a partir de um arquivo `.env` e definem o nome do banco de dados, a senha do root e outras configurações.
+- **app:** Este container é responsável por executar o servidor da aplicação Node.js. Ele depende do container `mysqldb` para acessar o banco de dados. As configurações do banco de dados, como host, porta, usuário e senha, são definidas como variáveis de ambiente.
+- **front:** Este container executa a parte do cliente do aplicativo, construída em React. Ele depende do container `app` para acessar a API do servidor. O arquivo `Dockerfile` é usado para construir a imagem do container, e a URL da API é passada como uma variável de ambiente.
 O sistema pode ser executado pelo comando:
 ```bash
 docker-compose up
@@ -52,7 +52,7 @@ docker-compose down
 ```
 O projeto irá rodar nas seguintes portas:
 - Front-end: [localhost:3001](http://localhost:3001/)
-- API: [localhost:300](http://localhost:3000/)
+- API: [localhost:3000](http://localhost:3000/)
 
 
 
@@ -83,10 +83,10 @@ O projeto irá rodar nas seguintes portas:
 
 ## Teste do projeto
 
-1. Foi utilizado o software lighhouse para testar desempenho do app
+1. Foi utilizado o software lighthouse para testar desempenho do app
 ![Teste do software](project_imgs/lighthouse_test.png)
 2. Para teste da API foi utilizado uma extensão do vs-code chamada [RapidAPI](https://rapidapi.com/)
 ![Teste da API](project_imgs/api_test.png)
 
 ## Observações
-Quando o projeto estava em desenvolvimento, foi possível encontrar algumas vezes um pequeno erro ao inicializar o contâiner com as imagens. Para corrigir bastar reiniciar o processo, rodar novamento o 'docker compose up'
+Quando o projeto estava em desenvolvimento, foi possível encontrar algumas vezes um pequeno erro ao inicializar o container com as imagens. Para corrigir bastar reiniciar o processo, rodar novamente o 'docker compose up'.
