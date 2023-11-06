@@ -11,15 +11,15 @@ Neste projeto, utilizei as seguintes tecnologias:
 - **Express:** Framework web para construir APIs de forma simples e eficiente.
 - **Mysql2:** Sistema de gerenciamento de banco de dados relacional para armazenar informações dos veículos.
 - **Sequelize:** Biblioteca ORM (Object-Relational Mapping) para facilitar a interação com o banco de dados.
-- **Cors:**
-- **Dotenv:**
-- **Nodemon:**
-- **Axios:**
-- **Bootstrap:**
-- **React:**
-- **React-dom:**
-- **React-router-dom:**
-- **Docker:**
+- **Cors:** Middleware utilizado para configurar políticas de segurança em APIs, permitindo ou bloqueando solicitações vindas de origens diferentes.
+- **Dotenv:** Biblioteca que permite carregar variáveis de ambiente a partir de um arquivo .env
+- **Nodemon:** Nodemon é uma ferramenta que monitora as alterações em seu código-fonte e automaticamente reinicia o servidor Node.js
+- **Axios:**  Axios é uma biblioteca para fazer requisições HTTP a partir do navegador ou do Node.js, tornando a comunicação com APIs externas mais simples e eficaz.
+- **Bootstrap:** Bootstrap é um framework de front-end
+- **React:** React é uma biblioteca JavaScript para a criação de interfaces de usuário interativas e componentizadas.
+- **React-dom:** React-dom é a parte do React usada para renderizar componentes React no navegador.
+- **React-router-dom:**  React-router-dom é uma biblioteca usada para adicionar roteamento à aplicação React, permitindo a criação de páginas e navegação entre elas.
+- **Docker:** Docker é uma plataforma que permite criar, implantar e executar aplicativos em contêineres, isolando as dependências do aplicativo e tornando a implantação mais fácil e consistente.
 
 ### Funcionalidades
 O sistema possui as seguintes funcionalidades:
