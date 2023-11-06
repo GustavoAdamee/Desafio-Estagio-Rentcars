@@ -58,52 +58,35 @@ O projeto irá rodar nas seguintes portas:
 
 ## Exemplo de Uso
 
-### Adicionar Veículo
+### Home Page
 
-1. Na página inicial do aplicativo, clique no botão "Adicionar Veículo".
+1. Página inicial do aplicativo, clique no botão "Add new vehicle" para adicionar um veículo.
 
-![Adicionar Veículo](screenshots/adicionar-veiculo.png)
+![Página principal](project_imgs/home_page.png)
 
-2. Preencha os campos obrigatórios, como modelo, marca, ano, etc.
+2. Página principal com veículos adicionados.
 
-![Preencher Detalhes do Veículo](screenshots/preencher-detalhes-veiculo.png)
+![Página principal com veículos](project_imgs/vehicles_page.png)
 
-3. Clique no botão "Salvar" para adicionar o veículo ao sistema.
+### Adicionar veiculo
 
-![Salvar Veículo](screenshots/salvar-veiculo.png)
+1. Na página para adicionar um veículo é possível preencher o seguinte formulário.
 
-### Visualizar Lista de Veículos
-
-1. Na página inicial do aplicativo, você verá a lista de veículos disponíveis.
-
-![Lista de Veículos](screenshots/lista-veiculos.png)
-
-2. Clique em um veículo na lista para visualizar informações detalhadas.
-
-![Detalhes do Veículo](screenshots/detalhes-veiculo.png)
+![Adicionar veículo](project_imgs/add_vehicle_page.png)
 
 ### Editar ou Deletar um Veículo
 
-1. No detalhes do veículo, você encontrará opções para editar ou deletar o veículo.
+1. Na lista de veículos ao clicar no botão editar, você encontrará opções para atualizar ou deletar o veículo.
 
-![Opções de Edição e Deleção](screenshots/editar-deletar-veiculo.png)
-
-2. Clique em "Editar" para fazer alterações nos detalhes do veículo.
-
-![Editar Veículo](screenshots/editar-veiculo.png)
-
-3. Clique em "Deletar" para remover o veículo do sistema.
-
-![Deletar Veículo](screenshots/deletar-veiculo.png)
+![Opções de atualizar e deletar veículo](project_imgs/edit_vehicle.png)
 
 
+## Teste do projeto
 
-## Contribuição
-Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests com melhorias, correções de bugs e novas funcionalidades.
+1. Foi utilizado o software lighhouse para testar desempenho do app
+![Teste do software](project_imgs/lighthouse_test.png)
+2. Para teste da API foi utilizado uma extensão do vs-code chamada [RapidAPI](https://rapidapi.com/)
+![Teste da API](project_imgs/api_test.png)
 
-## Licença
-Este projeto é distribuído sob a licença [inserir nome da licença aqui]. Consulte o arquivo `LICENSE` para obter mais detalhes.
-
-## Contato
-[Inserir suas informações de contato, como e-mail ou redes sociais, caso deseje que as pessoas entrem em contato com você sobre o projeto.]
-
+## Observações
+Quando o projeto estava em desenvolvimento, foi possível encontrar algumas vezes um pequeno erro ao inicializar o contâiner com as imagens. Para corrigir bastar reiniciar o processo, rodar novamento o 'docker compose up'
